@@ -1,0 +1,161 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all 0.5s ease-in;
+    text-align: center;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    text-align: center;
+}
+#section-1{
+    background-image: url(../assets/backgrounds/h_img.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    height: 97vh;
+}
+#del{
+    padding-top: 20vh;
+    padding-bottom: 20px;
+}
+#mouse{
+    padding-top: 130px;
+    animation: bounce 2s infinite;
+}
+#section-2{
+    margin: 50px auto;
+}
+#section-3{
+    background-image: url(../assets/backgrounds/s_image.jpg);
+    color: #fff;
+    padding: 100px 10%;
+}
+#section-5 h1{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.p1, .p2, .p3{
+    display: none;
+}
+#section-5{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 70vw;
+    margin: 30px auto;
+    padding: 4.7px;
+}
+.A, .B, .C, .D, .E, .F, .G, .H{
+    width: 153px;
+    height: 153px;
+    margin: 5px;
+}
+.A{
+    background-image: url(../assets/portfolio/work1.jpg);
+    background-size: cover;
+}
+.B{
+    background-image: url(../assets/portfolio/work2.jpg);
+    background-size: cover;
+}
+.C{
+    background-image: url(../assets/portfolio/work3.jpg);
+    background-size: cover;
+}
+.D{
+    background-image: url(../assets/portfolio/work4.jpg);
+    background-size: cover;
+}
+.E{
+    background-image: url(../assets/portfolio/work5.jpg);
+    background-size: cover;
+}
+.F{
+    background-image: url(../assets/portfolio/work6.jpg);
+    background-size: cover;
+}
+.G{
+    background-image: url(../assets/portfolio/work7.jpg);
+    background-size: cover;
+}
+.H{
+    background-image: url(../assets/portfolio/work8.jpg);
+    background-size: cover;
+}
+.text{
+    background-color: rgba(247, 248, 249,0.7);
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position:relative;
+    margin-top: 20px;
+    opacity: 0;
+}
+.text:hover{
+    visibility: visible;
+    opacity: 1;
+}
+.text>p {
+    padding-top: 67px;
+}
+#section-6 {
+  background-image: url(../assets/backgrounds/c_image.jpg);
+  padding: 40px 5px;
+  color: white;
+  max-width: 100vw;
+}
+.message{
+  padding: 3px 15px;
+  margin: 7px 2px;
+  width: 700px;
+  max-width: 89%;
+}
+form{
+    width: 700px;
+    max-width: 90%;
+}
+::placeholder{
+    color: rgb(204, 204, 204);
+}
+form input{
+    width:49%;
+    position: center;
+}
+form input, form textarea{
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 7px;
+}
+form textarea{
+    margin-top: 20px;
+    width: 98.8%;
+}
+footer{
+    padding-top: 40px;
+    text-align: center;
+    max-width: 70vw;
+    margin: 0 auto;
+}
+@media only screen and (max-width: 1024px){
+    .col-md-12 h1,#section-2 h1,#section-3 h1,#section-5 h1 {
+    font-size: calc(3vw + 3vh + .5vmin);
+}
+.col-md-12 p,#section-2 p,#section-3 p {
+    font-size: calc(1vw + 1vh + .5vmin);
+}
+}
+@media only screen and (max-width: 1024px){
+    form input, form textarea{
+    width: 100%;
+    margin: 5px 0;
+}
+    form input[type=submit]{
+    width: auto;
+    padding: 0 15%;
+}  
+}
