@@ -1,0 +1,24 @@
+{
+  "name": "delani-node-app",
+  "version": "1.0.0",
+  "description": "A website for Delani Studios",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "16.13.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eayuni/delani-node-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eayuni/delani-node-app/issues"
+  },
+  "homepage": "https://github.com/eayuni/delani-node-app#readme"
+}
