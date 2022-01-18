@@ -12,11 +12,11 @@ let start = function(route, handle){
        console.log("Request for "+pathname+" has been received");
 
        //passing pathname,handle as a parameter to route
-       route(handle, pathname);
+       var content = route(handle, pathname);
 
-        console.log("Request received!")
+        
         response.writeHead(200, {"Content-type": "text/plain"});
-        response.write("Hello World");
+        response.write(content);
         response.end();
      }
      
