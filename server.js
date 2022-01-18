@@ -12,12 +12,10 @@ let start = function(route, handle){
        console.log("Request for "+pathname+" has been received");
 
        //passing pathname,handle as a parameter to route
-       var content = route(handle, pathname);
+       // Inject the response object into the route function
+       route(handle, pathname, response);
 
         
-        response.writeHead(200, {"Content-type": "text/plain"});
-        response.write(content);
-        response.end();
      }
      
      http.createServer(onRequest).listen(3000);
