@@ -1,26 +1,28 @@
-// Craeting a basic http server
-
 let http = require('http');
 let url = require('url');
-const { route } = require('./router');
+let Logger = require('./logger');
+let logger = new Logger('Server');
 
-//function to wrap the server functionality so that it can be exported.
+// A function to wrap our server functionality so that we can export it
 let start = function(route, handle){
-    function onRequest(request, response){
-        // Extracting the pathname from the url requested
-       let pathname = url.parse(request.url).pathname
-       console.log("Request for "+pathname+" has been received");
 
-       //passing pathname,handle as a parameter to route
+   function onRequest(request, response){
+       // Extracting the pathname from the url requested
+       let pathname = url.parse(request.url).pathname
+      
+       console.log("Request for " + pathname + " has been received.")
+       logger.info("Request for " + pathname + " has been received with the request method " + request.method)
+      
        // Inject the response object into the route function
        route(handle, pathname, response);
 
-        
-     }
-     
-     http.createServer(onRequest).listen(3000);
+   }
+  
+   let PORT = process.env.PORT || 3000;
+
+   http.createServer(onRequest).listen(PORT);
+   logger.info(`Server has started on Port: ${PORT}`)
+   console.log(`Server has started on Port: ${PORT}`);
 }
 
 exports.start = start;
-
-console.log("Server has started.")
